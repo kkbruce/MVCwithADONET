@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "產品清單";
+}
+
+<h2>From DAL(ADO.NET)</h2>
+
+<ul>
+    @{
+        var table = (IEnumerable<System.Data.DataRow>)ViewBag.Table;
+        foreach (System.Data.DataRow row in table)
+        {
+            <li>
+                <span>@row["ProductID"] : @row["ProductName"]</span>
+            </li>
+        }
+    }
+</ul>

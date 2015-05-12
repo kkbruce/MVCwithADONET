@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "產品清單";
+}
+
+<h2>From ADO.NET</h2>
+<ul>
+    @{
+        foreach (System.Data.DataRow row in ViewData.Model.Rows)
+        {
+            <li>
+                <span>@row["ProductID"] : @row["ProductName"]</span>
+            </li>
+        }
+    }
+</ul>
+
